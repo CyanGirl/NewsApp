@@ -1,0 +1,10 @@
+#center {
+  padding: 15px;
+  width: 40vw;
+  margin: auto;
+}
+input,
+button {
+  width: 30vw;
+  margin: auto;
+}
