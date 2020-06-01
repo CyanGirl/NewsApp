@@ -1,7 +1,7 @@
 import React from "react";
 import { Component, useState, useEffect } from "react";
 import "./style.css";
-import { BrowserRouter as Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const News = () => {
   //state
@@ -23,6 +23,7 @@ const News = () => {
     fetchNews();
   }, [url]);
   const searchQuery = (e) => {
+    e.preventDefault();
     setSearchQ(e.target.value);
   };
   const submitF = (e) => {
@@ -45,9 +46,9 @@ const News = () => {
     );
   };
   const newsList = () => {
-    return news.map((n, id) => (
-      <div key={id}>
-        <Link to={`/News/${n.id}`}>
+    return news.map((n, i) => (
+      <div key={i}>
+        <Link to={{ pathname: `/News/${n.objectID}`, state: n }}>
           <p>{n.title}</p>
         </Link>
       </div>
@@ -61,7 +62,7 @@ const News = () => {
     } else {
       msg = (
         <div>
-          <h3>News about {searchQ}</h3>
+          <h3>Take a look at what people saying:</h3>
           {newsList()}
         </div>
       );
