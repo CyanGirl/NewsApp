@@ -1,8 +1,7 @@
 import React from "react";
 import { Component, useState, useEffect } from "react";
 import "./style.css";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import Details from "./Details";
+import { BrowserRouter as Link } from "react-router-dom";
 
 const News = () => {
   //state
@@ -47,8 +46,10 @@ const News = () => {
   };
   const newsList = () => {
     return news.map((n, id) => (
-      <div>
-        <p key={id}>{n.title}</p>
+      <div key={id}>
+        <Link to={`/News/${n.id}`}>
+          <p>{n.title}</p>
+        </Link>
       </div>
     ));
   };

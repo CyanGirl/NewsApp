@@ -1,7 +1,6 @@
 import React from "react";
 
 const Details = (props) => {
-  console.log(props);
-  return <h2>Details of</h2>;
+  return <h2>Details of {props.match.params.id}</h2>;
 };
 export default Details;
