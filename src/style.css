@@ -21,6 +21,10 @@ h5 {
   background-color: white;
   padding: 2px;
 }
+#links {
+  color: rgb(83, 35, 83);
+  font-style: italic;
+}
 input {
   width: 50vw;
   margin: auto;
