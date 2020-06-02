@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Component, useState, useEffect } from "react";
 import "./style.css";
+import Footer from "./footer";
 
 const Open = () => {
   const [searchQ, setSearchQ] = useState("React");
@@ -27,12 +28,14 @@ const Open = () => {
       <br />
       <br />
       <h2 className="text-center heading">News in Trend!</h2>
-      <br />
-      <br />
+
       {newsForm()}
       <Link to={{ pathname: "/News", state: searchQ }}>
         <h3 className="text-center search">Search</h3>
       </Link>
+      <br />
+      <br />
+      <Footer></Footer>
     </div>
   );
 };

@@ -2,13 +2,24 @@ html,
 body {
   height: 100%;
   min-width: 100%;
-  background-image: url("./image2.jpg");
+  background-image: linear-gradient(
+    90deg,
+    rgb(139, 207, 216),
+    rgb(213, 227, 228),
+    pink
+  );
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 form {
-  width: 50vw;
+  width: 55vw;
   margin: auto;
   padding: 15px;
+}
+
+h5 {
+  margin-top: 26vh;
+  background-color: white;
+  padding: 2px;
 }
 input {
   width: 50vw;
@@ -16,6 +27,7 @@ input {
   padding: 10px;
   border-radius: 5px;
   opacity: 0.8;
+  font-size: 18px;
 }
 .first {
   min-height: 50vh;
@@ -28,8 +40,28 @@ p {
   color: blue;
   text-shadow: 5px 5px 8px black;
 }
+.prev {
+  border: 2px solid skyblue;
+  border-radius: 4px;
+  width: 20vw;
+  background-color: rgb(81, 81, 160);
+  color: white;
+  padding: 5px;
+  text-align: center;
+}
+.prev:hover {
+  background-image: linear-gradient(180deg, purple, rgb(155, 98, 155));
+}
+.search {
+  width: 20vw;
+  margin: auto;
+  color: rgb(28, 28, 48);
+  padding: 5px;
+  border-radius: 4px;
+}
 .search:hover {
   text-shadow: 5px 5px 10px 8px black;
+  box-shadow: 5px 5px 10px 8px blue;
 }
 #centre {
   margin-top: 35vh;

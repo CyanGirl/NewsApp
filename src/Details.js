@@ -1,21 +1,32 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import Footer from "./footer";
 
 const Details = (props) => {
-  console.log(props);
   return (
     <div className="container-fluid">
       <br />
       <br />
-      <h2 className="text-center">{props.location.state.title}</h2>
+      <Link
+        to={{
+          pathname: `/News`,
+          state: props.location.state.searchQ,
+        }}
+      >
+        <h4 className="prev">Go Back</h4>
+      </Link>
+      <br />
+      <h2 className="text-center">{props.location.state.n.title}</h2>
       <br></br>
       <br />
+
       <h3 className="text-center">
         The ID of this news is: {props.match.params.id}
       </h3>
       <p className="text-center">
-        Written by <b>{props.location.state.author}</b> created at{" "}
-        {props.location.state.created_at}. With the ID{" "}
-        {props.location.state.created_at_i}.
+        Written by <b>{props.location.state.n.author}</b> created at{" "}
+        {props.location.state.n.created_at}. With the ID{" "}
+        {props.location.state.n.created_at_i}.
       </p>
       <br></br>
       <p className="text-center">
@@ -28,6 +39,7 @@ const Details = (props) => {
         <br />
         {props.location.state.url}
       </p>
+      <Footer />
     </div>
   );
 };

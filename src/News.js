@@ -2,6 +2,7 @@ import React from "react";
 import { Component, useState, useEffect } from "react";
 import "./style.css";
 import { Link } from "react-router-dom";
+import Footer from "./footer";
 
 const News = (props) => {
   //state
@@ -36,8 +37,8 @@ const News = (props) => {
 
   const newsList = () => {
     return news.map((n, i) => (
-      <div key={i}>
-        <Link to={{ pathname: `/News/${n.objectID}`, state: n }}>
+      <div key={i} className="news">
+        <Link to={{ pathname: `/News/${n.objectID}`, state: { n, searchQ } }}>
           <p id="links">{n.title}</p>
         </Link>
       </div>
@@ -70,10 +71,17 @@ const News = (props) => {
   //finally the rendering section
   return (
     <div className="container-fluid">
+      <br />
+      <br />
+      <Link to={{ pathname: "/" }}>
+        <h4 className="prev">Search Again</h4>
+      </Link>
+      <br />
       <h1 className="text-center">About {searchQ}</h1>
       <br></br>
       {loading()}
       {check()}
+      <Footer />
     </div>
   );
 };
