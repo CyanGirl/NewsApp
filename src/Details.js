@@ -13,7 +13,7 @@ const Details = (props) => {
           state: props.location.state.searchQ,
         }}
       >
-        <h4 className="prev">Go Back</h4>
+        <h6 className="prev">Go Back</h6>
       </Link>
       <br />
       <h2 className="text-center">{props.location.state.n.title}</h2>

@@ -74,7 +74,7 @@ const News = (props) => {
       <br />
       <br />
       <Link to={{ pathname: "/" }}>
-        <h4 className="prev">Search Again</h4>
+        <h6 className="prev">Search Again</h6>
       </Link>
       <br />
       <h1 className="text-center">About {searchQ}</h1>
