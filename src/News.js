@@ -9,7 +9,7 @@ const News = (props) => {
   const [news, setNews] = useState([]);
   const [searchQ, setSearchQ] = useState(props.location.state);
   const [url, setUrl] = useState(
-    `http://hn.algolia.com/api/v1/search?query=${searchQ}`
+    `https://hn.algolia.com/api/v1/search?query=${searchQ}`
   );
   const [load, setLoad] = useState(false);
   //from here our functions begin
