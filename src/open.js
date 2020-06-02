@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Component, useState, useEffect } from "react";
+import "./style.css";
 
-const Open = ({ history }) => {
+const Open = () => {
   const [searchQ, setSearchQ] = useState("React");
 
   const handleChange = (e) => {
@@ -10,26 +11,28 @@ const Open = ({ history }) => {
     setSearchQ(e.target.value);
   };
 
-  const HandleSubmit = () => {
-    history.push("/News");
-  };
-
   const newsForm = () => {
     return (
-      <div id="center">
-        <form onSubmit={HandleSubmit}>
+      <div>
+        <form>
           <input type="text" value={searchQ} onChange={handleChange}></input>
           <br />
           <br />
-          <button className="btn btn-primary">Search</button>
         </form>
       </div>
     );
   };
   return (
-    <div>
-      <h2>News in Trend!</h2>
+    <div className="first">
+      <br />
+      <br />
+      <h2 className="text-center heading">News in Trend!</h2>
+      <br />
+      <br />
       {newsForm()}
+      <Link to={{ pathname: "/News", state: searchQ }}>
+        <h3 className="text-center search">Search</h3>
+      </Link>
     </div>
   );
 };
