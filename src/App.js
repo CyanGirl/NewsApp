@@ -7,11 +7,9 @@ import Open from "./open";
 const App = (props) => {
   return (
     <div>
-      <Router>
-        <Route exact path="/News" component={News}></Route>
-        <Route path="/News/:id" component={Details}></Route>
-        <Route exact path="/" component={Open}></Route>
-      </Router>
+      <Route exact path="/News" component={News}></Route>
+      <Route path="/News/:id" component={Details}></Route>
+      <Route exact path="/" component={Open}></Route>
     </div>
   );
 };
