@@ -30,14 +30,14 @@ const Details = (props) => {
       </p>
       <br></br>
       <p className="text-center">
-        The number of comments in it are {props.location.state.num_comments}{" "}
-        with the scored points {props.location.state.points}
+        The number of comments in it are {props.location.state.n.num_comments}{" "}
+        with the scored points {props.location.state.n.points}
         <br />
         <br />
         <br />
         You can find the entire article over here:
         <br />
-        {props.location.state.url}
+        {props.location.state.n.url}
       </p>
       <Footer />
     </div>
