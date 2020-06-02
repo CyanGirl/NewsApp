@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/NewsApp/static/css/main.bbc4096c.chunk.css",
+    "main.js": "/NewsApp/static/js/main.a45db98e.chunk.js",
+    "main.js.map": "/NewsApp/static/js/main.a45db98e.chunk.js.map",
+    "runtime-main.js": "/NewsApp/static/js/runtime-main.a24d4dec.js",
+    "runtime-main.js.map": "/NewsApp/static/js/runtime-main.a24d4dec.js.map",
+    "static/js/2.d9c988c2.chunk.js": "/NewsApp/static/js/2.d9c988c2.chunk.js",
+    "static/js/2.d9c988c2.chunk.js.map": "/NewsApp/static/js/2.d9c988c2.chunk.js.map",
+    "index.html": "/NewsApp/index.html",
+    "precache-manifest.a1ba22f3fc36f9806d320d0dff66abf2.js": "/NewsApp/precache-manifest.a1ba22f3fc36f9806d320d0dff66abf2.js",
+    "service-worker.js": "/NewsApp/service-worker.js",
+    "static/css/main.bbc4096c.chunk.css.map": "/NewsApp/static/css/main.bbc4096c.chunk.css.map",
+    "static/js/2.d9c988c2.chunk.js.LICENSE.txt": "/NewsApp/static/js/2.d9c988c2.chunk.js.LICENSE.txt",
+    "static/media/style.css": "/NewsApp/static/media/image2.b406439d.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a24d4dec.js",
+    "static/js/2.d9c988c2.chunk.js",
+    "static/css/main.bbc4096c.chunk.css",
+    "static/js/main.a45db98e.chunk.js"
+  ]
+}
