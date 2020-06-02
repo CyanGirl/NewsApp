@@ -31,7 +31,7 @@ const Open = () => {
 
       {newsForm()}
       <Link to={{ pathname: "/News", state: searchQ }}>
-        <h3 className="text-center search">Search</h3>
+        <h4 className="text-center search">Search</h4>
       </Link>
       <br />
       <br />
