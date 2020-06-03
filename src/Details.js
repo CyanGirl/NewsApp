@@ -26,13 +26,13 @@ const Details = (props) => {
       <h3 className="text-center">
         The ID of this news is: {props.match.params.id}
       </h3>
-      <p className="text-center">
+      <p className="text-center container-fluid">
         Written by <b>{props.location.state.n.author}</b> created at{" "}
         {props.location.state.n.created_at}. With the ID{" "}
         {props.location.state.n.created_at_i}.
       </p>
       <br></br>
-      <p className="text-center">
+      <p className="text-center container-fluid">
         The number of comments in it are {props.location.state.n.num_comments}{" "}
         with the scored points {props.location.state.n.points}
         <br />
