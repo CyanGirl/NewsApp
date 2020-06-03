@@ -39,8 +39,12 @@ const News = (props) => {
     return news.map((n, i) => (
       <div key={i} className="news">
         <Link to={{ pathname: `/News/${n.objectID}`, state: { n, searchQ } }}>
-          <p id="links">{n.title}</p>
+          <p id="links">
+            {n.title}
+            {n.story_title}.
+          </p>
         </Link>
+        {console.log(n)}
       </div>
     ));
   };

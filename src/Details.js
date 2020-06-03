@@ -16,7 +16,10 @@ const Details = (props) => {
         <h6 className="prev">Go Back</h6>
       </Link>
       <br />
-      <h2 className="text-center">{props.location.state.n.title}</h2>
+      <h2 className="text-center">
+        {props.location.state.n.title}
+        {props.location.state.n.story_title}
+      </h2>
       <br></br>
       <br />
 
@@ -38,6 +41,7 @@ const Details = (props) => {
         You can find the entire article over here:
         <br />
         {props.location.state.n.url}
+        {props.location.state.n.story_url}
       </p>
       <Footer />
     </div>
