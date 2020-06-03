@@ -36,7 +36,7 @@ const Open = () => {
             type="text"
             value={searchQ}
             onChange={handleChange}
-            placeholder="Want to know something?"
+            placeholder="Topic?"
             required="true"
           ></input>
           <br />
