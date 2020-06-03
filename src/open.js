@@ -1,58 +1,53 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { Component, useState, useEffect } from "react";
 import "./style.css";
 import Footer from "./footer";
 
 const Open = () => {
   const [searchQ, setSearchQ] = useState("");
+  let history = useHistory();
 
   const handleChange = (e) => {
     e.preventDefault();
     setSearchQ(e.target.value);
   };
 
-  const check = () => {
+  const location = { pathname: "/News", state: searchQ };
+
+  const check = (e) => {
+    e.preventDefault();
     if (searchQ.length > 0) {
-      return (
-        <Link to={{ pathname: "/News", state: searchQ }}>
-          <h4 className="text-center search">Search</h4>
-        </Link>
-      );
-    } else {
-      return (
-        <Link>
-          <h4 className="text-center search">Tell Us</h4>
-        </Link>
-      );
+      history.replace(location);
     }
   };
 
   const newsForm = () => {
     return (
       <div>
-        <form>
+        <form onSubmit={check}>
           <input
             type="text"
             value={searchQ}
             onChange={handleChange}
             placeholder="Topic?"
-            required="true"
+            required
           ></input>
           <br />
           <br />
+          <button onClick={check} className="text-center search">
+            Search
+          </button>
         </form>
       </div>
     );
   };
   return (
-    <div className="first">
+    <div className="first text-center">
       <br />
       <br />
       <h2 className="text-center heading">News in Trend!</h2>
-
       {newsForm()}
-      {check()}
       <br />
       <br />
       <Footer></Footer>
