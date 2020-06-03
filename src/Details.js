@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Footer from "./footer";
 
 const Details = (props) => {
+  const [link, setLink] = useState(
+    props.location.state.n.story_url != null
+      ? props.location.state.n.story_url
+      : props.location.state.n.url
+  );
+
   return (
     <div className="container-fluid">
       <br />
@@ -40,8 +46,9 @@ const Details = (props) => {
         <br />
         You can find the entire article over here:
         <br />
-        {props.location.state.n.url}
-        {props.location.state.n.story_url}
+        <a href={`${link}`} target="_blank" className="link">
+          Check Here
+        </a>
       </p>
       <Footer />
     </div>
