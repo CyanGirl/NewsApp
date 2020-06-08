@@ -1,18 +1,20 @@
 import React from "react";
-import { Component, useState, useEffect } from "react";
+import { Component, useState, useEffect, useContext } from "react";
 import "./style.css";
 import { Link } from "react-router-dom";
 import Footer from "./footer";
+import { modeContext } from "./Context";
 
 const News = (props) => {
   //state
-  console.log(props);
   const [news, setNews] = useState([]);
   const [searchQ, setSearchQ] = useState(props.location.state);
   const [url, setUrl] = useState(
     `https://hn.algolia.com/api/v1/search?query=${searchQ}`
   );
   const [load, setLoad] = useState(false);
+
+  const [mode, setMode] = useContext(modeContext);
   //from here our functions begin
   const fetchNews = () => {
     setLoad(true);
@@ -40,11 +42,15 @@ const News = (props) => {
       <div key={i} className="news">
         <Link to={{ pathname: `/News/${n.objectID}`, state: { n, searchQ } }}>
           <p id="links">
-            {n.title}
-            {n.story_title}.
+            <span class="glyphicon glyphicon-link"></span>
+            <u>
+              {n.title}
+              {n.story_title}
+            </u>
           </p>
         </Link>
-        {console.log(n)}
+        <p>Wriiten By {n.author}</p>
+        <br />
       </div>
     ));
   };
@@ -65,6 +71,8 @@ const News = (props) => {
           <br />
           <hr />
           <br />
+          <br />
+          <br />
 
           {newsList()}
         </div>
@@ -74,18 +82,24 @@ const News = (props) => {
   };
   //finally the rendering section
   return (
-    <div className="container-fluid">
-      <br />
-      <br />
-      <Link to={{ pathname: "/" }}>
-        <h6 className="prev">Search Again</h6>
-      </Link>
-      <br />
-      <h1 className="text-center">About {searchQ}</h1>
-      <br></br>
-      {loading()}
-      {check()}
-      <Footer />
+    <div className={mode}>
+      <div className="container-fluid">
+        <div className="nav">
+          <Link to={{ pathname: "/" }}>
+            <h6 className="prev">
+              <span class="glyphicon glyphicon-search"></span> Search Again
+            </h6>
+          </Link>
+        </div>
+        <div className="content">
+          <br />
+          <h1 className="text-center text-uppercase">About {searchQ}</h1>
+          <br></br>
+          {loading()}
+          <div className="opac">{check()}</div>
+          <Footer />
+        </div>
+      </div>
     </div>
   );
 };

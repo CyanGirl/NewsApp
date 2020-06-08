@@ -1,13 +1,7 @@
-html,
 body {
-  height: 100%;
+  min-height: 100%;
   min-width: 100%;
-  background-image: linear-gradient(
-    90deg,
-    rgb(139, 207, 216),
-    rgb(213, 227, 228),
-    pink
-  );
+
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 form {
@@ -22,7 +16,11 @@ h5 {
   padding: 2px;
 }
 #links {
-  color: rgb(83, 35, 83);
+  color: rgb(68, 42, 68);
+  font-style: italic;
+}
+.dark #links {
+  color: rgb(216, 178, 216);
   font-style: italic;
 }
 input {
@@ -35,7 +33,14 @@ input {
 }
 .first {
   min-height: 50vh;
-  margin-top: 25vh;
+  margin-top: 30vh;
+}
+.nav {
+  position: fixed;
+  width: 95.5%;
+}
+.content {
+  margin-top: 10vh;
 }
 p {
   color: black;
@@ -83,9 +88,7 @@ p {
     rgb(67, 67, 192)
   );
 }
-#centre {
-  margin-top: 35vh;
-}
+
 .heading {
   animation-name: blink;
   animation-duration: 2.5s;
@@ -94,14 +97,103 @@ p {
 @keyframes blink {
   0% {
     color: black;
-    transform: scale(0.5);
   }
   50% {
     color: blue;
-    transform: scale(1);
   }
   100% {
-    transform: scale(0.7);
     color: rgb(5, 5, 34);
   }
+}
+h1 {
+  color: rgb(153, 40, 153);
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-left: 80vw;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+#centre {
+  margin-top: 30vh;
+}
+.dark {
+  background-image: linear-gradient(
+    90deg,
+    rgb(29, 28, 28),
+    #6e7a78,
+    rgb(34, 32, 32)
+  );
+  background-size: 100%;
+  color: rgb(216, 178, 216);
+}
+
+.light {
+  background-image: linear-gradient(90deg, #adfaf0, white, #adfaf0);
+  background-size: 100%;
+}
+.imp {
+  color: black !important;
+}
+.opac {
+  box-shadow: 2px 2px 5px 3px white;
+  width: 60vw;
+  margin: auto;
+  padding: 10px;
+}
+.dark h1 {
+  color: black;
+}
+.dark .link {
+  color: rgb(216, 178, 216);
 }
