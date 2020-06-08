@@ -54,7 +54,7 @@ const Details = (props) => {
               You can find the entire article over here:
               <br />
               <a href={`${link}`} target="_blank" className="link">
-                Check Here <span class="glyphicon glyphicon-link"></span>
+                Check Here <span className="glyphicon glyphicon-link"></span>
               </a>
             </p>
           </div>

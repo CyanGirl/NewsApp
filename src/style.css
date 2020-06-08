@@ -37,10 +37,13 @@ input {
 }
 .nav {
   position: fixed;
-  width: 95.5%;
+  width: 95%;
 }
 .content {
   margin-top: 10vh;
+}
+.point {
+  width: 50%;
 }
 p {
   color: black;
@@ -99,21 +102,21 @@ p {
     color: black;
   }
   50% {
-    color: blue;
+    color: rgb(212, 156, 214);
   }
   100% {
     color: rgb(5, 5, 34);
   }
 }
 h1 {
-  color: rgb(153, 40, 153);
+  color: rgb(82, 19, 82);
 }
 .switch {
   position: relative;
   display: inline-block;
   width: 60px;
   height: 34px;
-  margin-left: 80vw;
+  margin-left: 70vw;
 }
 .slider {
   position: absolute;
@@ -122,9 +125,10 @@ h1 {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: rgb(255, 233, 233);
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  border: 1px solid black;
 }
 
 .slider:before {
@@ -134,15 +138,18 @@ h1 {
   width: 26px;
   left: 4px;
   bottom: 4px;
-  background-color: white;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  background: linear-gradient(90deg, black, rgb(85, 84, 84), white);
+  box-shadow: 1px 1px 2px 2px white;
 }
 
 .slider.round {
   border-radius: 34px;
 }
-
+.dark p {
+  color: rgb(243, 239, 239);
+}
 .slider.round:before {
   border-radius: 50%;
 }
@@ -169,9 +176,9 @@ input:checked + .slider:before {
 }
 .dark {
   background-image: linear-gradient(
-    90deg,
+    125deg,
     rgb(29, 28, 28),
-    #6e7a78,
+    #3c4746,
     rgb(34, 32, 32)
   );
   background-size: 100%;
@@ -179,7 +186,7 @@ input:checked + .slider:before {
 }
 
 .light {
-  background-image: linear-gradient(90deg, #adfaf0, white, #adfaf0);
+  background-image: linear-gradient(125deg, #adfaf0, white, #adfaf0);
   background-size: 100%;
 }
 .imp {
@@ -187,7 +194,7 @@ input:checked + .slider:before {
 }
 .opac {
   box-shadow: 2px 2px 5px 3px white;
-  width: 60vw;
+  width: 80vw;
   margin: auto;
   padding: 10px;
 }
@@ -196,4 +203,7 @@ input:checked + .slider:before {
 }
 .dark .link {
   color: rgb(216, 178, 216);
+}
+.dark h1 {
+  color: pink;
 }

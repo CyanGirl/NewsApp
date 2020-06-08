@@ -42,7 +42,7 @@ const News = (props) => {
       <div key={i} className="news">
         <Link to={{ pathname: `/News/${n.objectID}`, state: { n, searchQ } }}>
           <p id="links">
-            <span class="glyphicon glyphicon-link"></span>
+            <span className="glyphicon glyphicon-link"></span>
             <u>
               {n.title}
               {n.story_title}
@@ -87,7 +87,7 @@ const News = (props) => {
         <div className="nav">
           <Link to={{ pathname: "/" }}>
             <h6 className="prev">
-              <span class="glyphicon glyphicon-search"></span> Search Again
+              <span className="glyphicon glyphicon-search"></span> Search Again
             </h6>
           </Link>
         </div>

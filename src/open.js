@@ -39,7 +39,7 @@ const Open = () => {
           <br />
           <br />
           <button onClick={check} className="text-center search">
-            <span class="glyphicon glyphicon-search"></span> Search
+            <span className="glyphicon glyphicon-search"></span> Search
           </button>
         </form>
       </div>
@@ -49,7 +49,7 @@ const Open = () => {
     <div className={mode}>
       <div className=" text-center">
         <br />
-        <div className="nav">
+        <div className="point">
           <Theme />
         </div>
 
