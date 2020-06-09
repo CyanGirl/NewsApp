@@ -16,7 +16,12 @@ const Theme = () => {
   return (
     <div>
       <label className="switch">
-        <input type="checkbox" onChange={handleBox} check={mode} />
+        <input
+          type="checkbox"
+          onChange={handleBox}
+          check={mode}
+          checked={mode == "dark" ? true : false}
+        />
         <span className="slider round"></span>
       </label>
     </div>
